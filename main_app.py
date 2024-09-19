@@ -8,7 +8,7 @@ from langdetect import detect
 
 st.title("Visual to Auditory Transformation")
 
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+#pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
 def detect_language(text):
     detected_language = detect(text)
