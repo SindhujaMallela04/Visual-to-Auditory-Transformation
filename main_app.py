@@ -23,8 +23,8 @@ def text_to_speech(text, output_language):
      
     with st.spinner("Converting to speech..."):         
         speech = gTTS(text, lang=output_language)    
-        mp3_file_path = "output_audio.mp3"
-        speech.save(mp3_file_path)      
+        mp3_file_path = os.path.join(os.getcwd(), "output_audio.mp3")
+        speech.save(mp3_file_path)     
         
         st.audio(mp3_file_path, format="audio/mp3")        
         st.markdown(get_binary_file_downloader_html(mp3_file_path, 'Download Audio'), unsafe_allow_html=True)
