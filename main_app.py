@@ -7,7 +7,8 @@ from gtts import gTTS
 from langdetect import detect
 
 st.title("Visual to Auditory Transformation")
-
+tessdata_dir = os.path.join(os.getcwd(), "Tess/Tesseract-OCR/tessdata")
+os.environ["TESSDATA_PREFIX"] = tessdata_dir
 #pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
 def detect_language(text):
